@@ -22,9 +22,11 @@ header{
 display: flex;
 justify-content: center;
 width: 100%;
-background-color: coral;
+background-color: rgb(241, 90, 35);
 color: rgb(247, 239, 239);
 font-weight: 3em;
+padding: 1em;
+border: 1em;
 }
 
 .mater{
@@ -34,6 +36,7 @@ font-weight: 3em;
   align-content: center;
   justify-content: center;
   width: 100%;
+  border-bottom: 1em, solid, red;
 }
 
 
@@ -70,6 +73,7 @@ font-weight: 3em;
 section {
 display: flex;
 justify-content: center;
+padding: 2em;
 
 }
 
