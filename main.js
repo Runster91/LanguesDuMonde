@@ -6,7 +6,7 @@ import { drawPieChart } from './pieChartDrawer';
 
 drawTable();
 
-drawChart().then(result => console.log(result));
+drawChart();
 
 drawPieChart();
   

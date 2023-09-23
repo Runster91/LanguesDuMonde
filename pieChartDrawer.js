@@ -3,7 +3,7 @@ import { Chart } from 'chart.js';
 
 export async function drawPieChart() {
     try {
-      const response = await fetch('http://localhost:3000/langues');
+      const response = await fetch('./db.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -61,7 +61,7 @@ export async function drawPieChart() {
         }
       });
     } catch (error) {
-      console.error('Error fetching data or drawing pie chart:', error);
+      console.error('Error fetching data or drawing pie chart:', error );
     }
   }
   

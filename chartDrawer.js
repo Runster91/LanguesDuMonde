@@ -3,7 +3,7 @@ import { Chart } from 'chart.js';
 
 export async function drawChart() {
     try {
-      const response = await fetch('http://localhost:3000/langues');
+      const response = await fetch('./db.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

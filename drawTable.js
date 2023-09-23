@@ -1,10 +1,19 @@
+import { Chart } from 'chart.js';
+
 export async function drawTable() {
     try {
-      const response = await fetch('http://localhost:3000/langues');
+      const response = await fetch('./db.json');
+      const list = await response.json();
+      console.log(list)
+
       if (!response.ok) {
         throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
+    }
+     
+
+      
+    
+      const data = list.langues; 
   
       const canvas = document.getElementById('tableCanvas');
       const ctx = canvas.getContext('2d');
@@ -23,7 +32,7 @@ export async function drawTable() {
       ctx.lineTo(600, 40);
       ctx.stroke();
   
-      // Draw table rows
+     
       data.forEach((langue, index) => {
         const y = 70 + (index * cellHeight);
   
