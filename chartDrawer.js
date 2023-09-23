@@ -1,5 +1,18 @@
 
-import { Chart } from 'chart.js';
+import { 
+  Chart, 
+  BarController, 
+  BarElement, 
+  LinearScale, 
+  CategoryScale, 
+  Title, 
+  Tooltip 
+} from 'chart.js';
+
+Chart.register(BarController, BarElement, LinearScale, CategoryScale, Title, Tooltip);
+
+
+
 
 export async function drawChart() {
     try {
@@ -7,9 +20,11 @@ export async function drawChart() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
-      if(!data) return 'Data not fetched'; // Check if data is fetched
-  
+      const list= await response.json();
+      if(!list) return 'Data not fetched';
+      
+      const data = list.langues; 
+
       const ctx = document.getElementById('myChart').getContext('2d');
       if(!ctx) return 'Context not found'; // Check if context is found
   
@@ -25,8 +40,8 @@ export async function drawChart() {
           datasets: [{
             label: 'Nombre de parleurs natifs',
             data: dataSet,
-            backgroundColor: Array(labels.length).fill('rgba(255, 99, 132, 0.2)'),
-            borderColor: Array(labels.length).fill('rgba(255, 99, 132, 1)'),
+            backgroundColor: Array(labels.length).fill('rgb(255, 0, 0)'),
+            borderColor: Array(labels.length).fill('rgb(68, 73, 91)'),
             borderWidth: 1
           }]
         },
@@ -36,6 +51,7 @@ export async function drawChart() {
               beginAtZero: true
             }
           }
+          
         }
       });
       return 'Chart drawn successfully'; // Check if chart drawing is successful

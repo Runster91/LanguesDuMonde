@@ -1,12 +1,81 @@
 body{
   background-color: rgb(7, 0, 0);
   color: white;
+  display: flex;
+  flex-direction: column;
   
 }
 
+
 canvas {
-  background-color: rgb(173, 143, 143);
+  background-color: rgb(235, 226, 226);
   color: white;
   display: flex;
   justify-content: center;
+  padding: 2em;
+  border: 5px, solid, black;
+  
+ 
+}
+
+header{
+display: flex;
+justify-content: center;
+width: 100%;
+background-color: coral;
+color: rgb(247, 239, 239);
+font-weight: 3em;
+}
+
+.mater{
+  
+  border: 2px, solid, white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.sm{
+  border-radius: 120px;
+  height: 3em;
+  padding: 1em;
+}
+
+#tableCanvas{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: chocolate;
+
+
+}
+
+#myCharts{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#myPieChart{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+section {
+display: flex;
+justify-content: center;
+
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+  height: 1em;
 }

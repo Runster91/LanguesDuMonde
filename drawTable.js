@@ -29,7 +29,7 @@ export async function drawTable() {
       ctx.fillText('Parleurs Natif', 120, 30);
       ctx.beginPath();
       ctx.moveTo(0, 40);
-      ctx.lineTo(600, 40);
+      ctx.lineTo(250, 40);
       ctx.stroke();
   
      
@@ -42,7 +42,7 @@ export async function drawTable() {
   
         ctx.beginPath();
         ctx.moveTo(0, y + 10);
-        ctx.lineTo(600, y + 10);
+        ctx.lineTo(250, y + 10);
         ctx.stroke();
       });
     } catch (error) {

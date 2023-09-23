@@ -1,4 +1,13 @@
-import { Chart } from 'chart.js';
+import {
+  Chart,
+  PieController,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
+
+Chart.register(PieController, ArcElement, Title, Tooltip, Legend);
 
 
 export async function drawPieChart() {
@@ -7,7 +16,9 @@ export async function drawPieChart() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
+      const list = await response.json();
+
+      const data = list.langues;
   
       // Processing the data
       let originData = {};
@@ -33,12 +44,14 @@ export async function drawPieChart() {
           datasets: [{
             data: dataSet,
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)'
+              'rgb(255, 0, 0)',
+              'rgb(255, 165, 0)',
+              'rgb(60, 179, 113)',
+              'rgb(106, 90, 205)',
+              'rgb(0, 0, 255)',
+              'rgb(179, 179, 0)',
+              'rgb(0, 172, 230)'
+
             ],
             borderColor: [
               'rgba(255, 99, 132, 1)',
