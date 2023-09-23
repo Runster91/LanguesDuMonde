@@ -85,3 +85,28 @@ footer{
   background-color: crimson;
   
 }
+
+@media (max-width: 768px) {
+
+  header {
+    font-size: 1.5em; 
+    padding: 0.5em;
+  }
+
+  .sm {
+    height: 2.5em;
+    padding: 0.5em;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  footer {
+    height: 3em;
+  }
+
+
+
+}
+
